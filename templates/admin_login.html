@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login do Admin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="admin-page">
+  <main class="login-wrap">
+    <form class="login-card" method="post">
+      <h1>Area administrativa</h1>
+      <p>Use a senha de admin para editar o cardapio.</p>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <p class="flash flash--{{ category }}">{{ message }}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <label for="password">Senha</label>
+      <input id="password" name="password" type="password" required>
+      <button type="submit">Entrar</button>
+
+      <a href="{{ url_for('index') }}" class="back-link">Voltar para o cardapio</a>
+    </form>
+  </main>
+</body>
+</html>

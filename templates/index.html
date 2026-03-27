@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Balneario</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="public-page">
+  <header class="hero" id="top">
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <div class="hero__logo-section">
+        <img src="{{ url_for('media_file', filename='logo.jpg') }}" alt="Logo Arena Balneario" class="hero__logo">
+      </div>
+      
+      <div class="hero__info-main">
+        <h1>Arena Balneario</h1>
+        <p class="hero__location">Av Genesio de Lima Brito, Qd 135 Lt 28/29, Goiânia, Brazil 74591000</p>
+      </div>
+
+      <div class="hero__schedule">
+        <div class="schedule-item">
+          <span class="schedule-day">Qua/Qui</span>
+          <span class="schedule-time">18h a 03h</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-day">Sex/Sáb</span>
+          <span class="schedule-time">18h a 06h</span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-day">Domingo</span>
+          <span class="schedule-time">16h a 23h</span>
+        </div>
+      </div>
+
+      <p class="hero__tagline">Venha se distrair</p>
+
+      <nav class="menu-tabs" aria-label="Categorias do cardapio">
+        {% for category in categories %}
+          <a href="#{{ category }}" class="tab-link smooth-scroll">{{ category|title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {% if has_video %}
+      <section class="spotlight">
+        <h2>Nosso ambiente</h2>
+        <video class="spotlight__video" autoplay muted loop playsinline>
+          <source src="{{ url_for('media_file', filename='video.mp4') }}" type="video/mp4">
+          Seu navegador nao suporta video em HTML5.
+        </video>
+      </section>
+    {% endif %}
+
+    {% for category in categories %}
+      <section id="{{ category }}" class="menu-section">
+        <div class="menu-section__title-row">
+          <h2>{{ category|title }}</h2>
+          <a href="#top" class="top-link">Voltar ao topo</a>
+        </div>
+
+        <div class="cards-grid">
+          {% if grouped[category] %}
+            {% for item in grouped[category] %}
+              <article
+                class="menu-card"
+                role="button"
+                tabindex="0"
+                data-name="{{ item.name }}"
+                data-description="{{ item.description }}"
+                data-price="{{ '%.2f'|format(item.price) }}"
+                data-image="{{ item.image }}"
+                data-options='{{ item.options|default([], true)|tojson }}'
+              >
+                {% if item.image %}
+                  <img
+                    src="{{ url_for('media_file', filename=item.image) }}"
+                    alt="Foto de {{ item.name }}"
+                    class="menu-card__img"
+                    loading="lazy"
+                  >
+                {% else %}
+                  <div class="menu-card__placeholder">Sem foto</div>
+                {% endif %}
+
+                <div class="menu-card__body">
+                  <h3>{{ item.name }}</h3>
+                  <p class="price">R$ {{ '%.2f'|format(item.price) }}</p>
+                  {% if item.options %}
+                    <div class="menu-card__options">
+                      {% for option in item.options %}
+                        <p>{{ option.name }}: R$ {{ '%.2f'|format(option.price) }}</p>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                  <p class="hint">Toque para ver detalhes</p>
+                </div>
+              </article>
+            {% endfor %}
+          {% else %}
+            <p class="empty-text">Nenhum item cadastrado nesta categoria ainda.</p>
+          {% endif %}
+        </div>
+      </section>
+    {% endfor %}
+  </main>
+
+  <div id="itemModal" class="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal="true"></div>
+    <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close-modal="true" aria-label="Fechar">x</button>
+      <img id="modalImage" class="modal__image" alt="Imagem do produto" hidden>
+      <div id="modalNoImage" class="modal__no-image">Este item nao possui foto.</div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalPrice" class="modal__price"></p>
+      <div id="modalOptions" class="modal__options"></div>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <small>Cardapio digital</small>
+      <a href="{{ url_for('admin_login') }}">Area do admin</a>
+    </div>
+  </footer>
+
+  <script>
+    window.menuMediaBase = "{{ url_for('media_file', filename='') }}";
+  </script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

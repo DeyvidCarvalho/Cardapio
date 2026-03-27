@@ -1,0 +1,248 @@
+[
+  {
+    "id": "f8e3b70b-a813-4c3f-a8fe-dcf7f8b8f001",
+    "name": "Frango a passarinho",
+    "category": "porções",
+    "price": 39.9,
+    "options": [],
+    "description": "Porcao crocante e temperada, ideal para compartilhar.",
+    "image": "frango a passarinho.jpg",
+    "image_position_x": 50,
+    "image_position_y": 50,
+    "image_scale": 1.0
+  },
+  {
+    "id": "f8e3b70b-a813-4c3f-a8fe-dcf7f8b8f002",
+    "name": "Refrigerante lata",
+    "category": "bebidas",
+    "price": 5.0,
+    "description": "Coca-cola, Coca-cola(zero), Guaraná Antartica, Fanta Laranja, Sprite",
+    "image": "refrigerante lata.jpg"
+  },
+  {
+    "id": "f8e3b70b-a813-4c3f-a8fe-dcf7f8b8f003",
+    "name": "Mousse de Maracuja",
+    "category": "Outros",
+    "price": 12.5,
+    "description": "Sobremesa leve e cremosa, servida gelada.",
+    "image": "mousse.png"
+  },
+  {
+    "id": "7f5a27de-5f94-4974-a02d-2c9ad62dbe60",
+    "name": "Lambari",
+    "category": "porções",
+    "price": 45.9,
+    "description": "Peixe frito, suculento e gostoso!",
+    "image": ""
+  },
+  {
+    "id": "695d3131-0f0a-4a35-802c-c8f7309299ad",
+    "name": "Isca de Tilápia",
+    "category": "porções",
+    "price": 45.9,
+    "description": "Iscas de Tilápias suculentas",
+    "image": ""
+  },
+  {
+    "id": "c40d3851-4e49-4d4a-90c2-6e0099747aea",
+    "name": "Filé de arraia",
+    "category": "porções",
+    "price": 45.9,
+    "description": "Filézinho de arraia, uma delícia!",
+    "image": ""
+  },
+  {
+    "id": "51088083-5925-444c-bf52-fea3f16c12e1",
+    "name": "Disquinho de costela c/Queijo (UNIDADE)",
+    "category": "doses",
+    "price": 12.0,
+    "description": "Disquinho recheado de costela desfiada com queijo - 125G",
+    "image": ""
+  },
+  {
+    "id": "1f4eedde-0e18-4fea-b661-bcff94979b2f",
+    "name": "Bolinho de costela c/Queijo",
+    "category": "porções",
+    "price": 35.0,
+    "description": "Bolinhos gostosos e bem recheados",
+    "image": ""
+  },
+  {
+    "id": "a889394e-6e24-4809-912e-262df88f604b",
+    "name": "Bolinho de Mandioca com Carne Seca",
+    "category": "porções",
+    "price": 32.0,
+    "description": "Bolinho de mandioca crocante e bem recheado!",
+    "image": ""
+  },
+  {
+    "id": "7dacca76-d70a-45d6-851a-5597fa131290",
+    "name": "Isca de Frango",
+    "category": "porções",
+    "price": 35.0,
+    "description": "Iscas para amantes de frango!",
+    "image": ""
+  },
+  {
+    "id": "295b32ec-94ab-48a6-b7b9-bc9def8095e4",
+    "name": "Disquinho de Carne com Queijo",
+    "category": "porções",
+    "price": 35.0,
+    "description": "Disquinhos deliciosos e bem recheados",
+    "image": ""
+  },
+  {
+    "id": "ac626745-3d82-44c4-a954-36434170eb18",
+    "name": "Filé de Tilápia Empanado",
+    "category": "doses",
+    "price": 45.0,
+    "description": "Empanado de peixe muito saboroso!",
+    "image": ""
+  },
+  {
+    "id": "bbea8a95-4438-45eb-b6c6-6d0fefa691ec",
+    "name": "Batata Frita Simples(GRANDE)",
+    "category": "porções",
+    "price": 28.0,
+    "description": "Porção generosa de batata frita, crocante e sequinha!",
+    "image": ""
+  },
+  {
+    "id": "eb11dc78-9737-4b07-9add-b9da7a8531ce",
+    "name": "Batata Frita Simples(Pequena)",
+    "category": "porções",
+    "price": 15.0,
+    "description": "Pequena porção de batatas fritas crocantes e sequinhas",
+    "image": ""
+  },
+  {
+    "id": "4c245db6-8a92-426d-a6fe-c8d84652ee52",
+    "name": "Batata Frita ESPECIAL(GRANDE)",
+    "category": "porções",
+    "price": 35.0,
+    "options": [
+      {
+        "name": "Batata Frita ESPECIAL(Pequena)",
+        "price": 20.0
+      }
+    ],
+    "description": "Batata frita com aquele cheddar e bacon que todo mundo gosta!",
+    "image": "batataespecial.jpeg"
+  },
+  {
+    "id": "90a1b635-ac58-4034-82db-ebdb26afa982",
+    "name": "Calabresa Acebolada",
+    "category": "porções",
+    "price": 25.0,
+    "description": "Calabresinha suculenta acebolada!",
+    "image": ""
+  },
+  {
+    "id": "7f128383-d343-4859-82ff-94e26c329b83",
+    "name": "51",
+    "category": "doses",
+    "price": 2.5,
+    "description": "Dose de 51",
+    "image": ""
+  },
+  {
+    "id": "ef2f519e-919a-47e7-a2d2-b3ccfbe1b4c6",
+    "name": "Vodka Rustoff",
+    "category": "doses",
+    "price": 2.5,
+    "description": "Dose de Vodka Rustoff",
+    "image": ""
+  },
+  {
+    "id": "90c4f03c-7f27-4c5f-8266-2ee775c3b684",
+    "name": "Para Tudo",
+    "category": "doses",
+    "price": 5.0,
+    "description": "Geladinha, é boa bom com aperitivos",
+    "image": ""
+  },
+  {
+    "id": "367e18cb-48d6-40e7-b718-7ca9a8fdfaf0",
+    "name": "Velho Barreiro",
+    "category": "doses",
+    "price": 5.0,
+    "description": "Dose Geladinha de Velho Barreiro",
+    "image": ""
+  },
+  {
+    "id": "34e1b3e6-2bcd-4bab-af36-0cb2a8209901",
+    "name": "Tanqueray Gin",
+    "category": "doses",
+    "price": 15.0,
+    "description": "Gin Tanqueray geladinho",
+    "image": ""
+  },
+  {
+    "id": "46ea4388-1498-4cb2-bd0a-f9789a6c9ef8",
+    "name": "Jack Daniels",
+    "category": "doses",
+    "price": 15.0,
+    "description": "Jack Daniels geladinha",
+    "image": ""
+  },
+  {
+    "id": "b9a8d4ab-c5a6-4b73-b2cb-b3a107e0dc87",
+    "name": "Salinas Agua Ardente",
+    "category": "doses",
+    "price": 15.0,
+    "description": "Geladinha e top!",
+    "image": ""
+  },
+  {
+    "id": "843044ea-6898-4ed5-a560-96478500c496",
+    "name": "Suco Lafruit Lata",
+    "category": "bebidas",
+    "price": 6.0,
+    "description": "Uva, Maracujá",
+    "image": ""
+  },
+  {
+    "id": "1f8a691f-1504-4dfa-afe2-ad43756a754e",
+    "name": "Refri 600ml",
+    "category": "doses",
+    "price": 8.0,
+    "description": "Coca-cola, Coca-cola(zero)",
+    "image": ""
+  },
+  {
+    "id": "5e2b0ff4-e93b-4fed-9713-ba5fc57a9662",
+    "name": "Refri 2L TS(Guaraná Antartica, Fanta Laranja e Sprite)",
+    "category": "bebidas",
+    "price": 12.0,
+    "options": [
+      {
+        "name": "Coca-Cola",
+        "price": 15.0
+      }
+    ],
+    "description": "Guaraná Antartica, Fanta Laranja, Sprite e Coca-Cola: R$12.00",
+    "image": ""
+  },
+  {
+    "id": "e403245d-8db2-4131-8e59-9751295fc772",
+    "name": "Água Mineral",
+    "category": "bebidas",
+    "price": 4.0,
+    "options": [
+      {
+        "name": "Água com Gás",
+        "price": 5.0
+      },
+      {
+        "name": "Água Tônica",
+        "price": 5.0
+      },
+      {
+        "name": "H2O LIMAO LIMONETO",
+        "price": 8.0
+      }
+    ],
+    "description": "Água Mineral\r\nÁgua com Gás \r\nÁgua Tônica \r\nH2O LIMAO LIMONETO",
+    "image": ""
+  }
+]
