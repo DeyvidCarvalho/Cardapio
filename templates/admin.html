@@ -154,8 +154,8 @@
                 </div>
               </form>
 
-              <form method="post" action="{{ url_for('delete_item', item_id=item.id) }}" onsubmit="return confirm('Remover este item?');">
-                <button type="submit" class="danger">Excluir</button>
+              <form method="post" action="{{ url_for('delete_item', item_id=item.id) }}" class="admin-delete-form" onsubmit="return confirm('Remover este item?');">
+                <button type="submit" class="admin-delete-btn">Excluir item</button>
               </form>
             </article>
           {% endfor %}
